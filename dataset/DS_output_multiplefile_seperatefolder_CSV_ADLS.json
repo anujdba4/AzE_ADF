@@ -1,0 +1,17 @@
+{
+	"name": "DS_output_multiplefile_seperatefolder_CSV_ADLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_output_multiplefile_seperatefolder_CSV_ADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "excelfolder"
+			}
+		}
+	}
+}

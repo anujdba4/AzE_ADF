@@ -1,0 +1,27 @@
+{
+	"name": "DS_Switch_multiplefiles_seperatefolder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_Switch_multiplefiles_seperatefolder",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sourcefile": {
+				"type": "string",
+				"defaultValue": "@item().name"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().sourcefile",
+					"type": "Expression"
+				},
+				"container": "input"
+			}
+		}
+	}
+}

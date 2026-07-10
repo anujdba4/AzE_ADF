@@ -1,0 +1,27 @@
+{
+	"name": "DS_multiplefiles_seperatefolder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_multiplefiles_seperatefolder",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sourcefile": {
+				"type": "string",
+				"defaultValue": "*"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().sourcefile",
+					"type": "Expression"
+				},
+				"container": "input"
+			}
+		}
+	}
+}
