@@ -1,0 +1,23 @@
+{
+	"name": "DS_multiplecsv_blob_paquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_multiplecsv_blob_parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "csvfiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

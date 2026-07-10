@@ -1,0 +1,25 @@
+{
+	"name": "TRG_Event_lookup_filter_ADLS",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Pl_lookup_filter",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/input/blobs/",
+			"blobPathEndsWith": "industry_sic1.csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/fe8b304a-1153-4320-84d9-e52e38e9754a/resourceGroups/rg_dev_visionboard/providers/Microsoft.Storage/storageAccounts/blobstoragedevvisionbord",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

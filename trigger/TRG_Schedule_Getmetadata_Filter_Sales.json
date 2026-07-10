@@ -1,0 +1,25 @@
+{
+	"name": "TRG_Schedule_Getmetadata_Filter_Sales",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_Getmetadata_Filter",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 12,
+				"startTime": "2026-07-09T09:10:00",
+				"endTime": "2026-07-10T03:35:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

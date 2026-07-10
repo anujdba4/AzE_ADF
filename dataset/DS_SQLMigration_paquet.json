@@ -1,0 +1,20 @@
+{
+	"name": "DS_SQLMigration_paquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLMigration_Parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "sqlserveronpremisesdata"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

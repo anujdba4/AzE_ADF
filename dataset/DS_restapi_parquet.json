@@ -1,0 +1,20 @@
+{
+	"name": "DS_restapi_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_restapi_parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "restoutput"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

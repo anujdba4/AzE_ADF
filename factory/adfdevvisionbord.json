@@ -1,0 +1,15 @@
+{
+	"name": "adfdevvisionbord",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "aa3b6726-1a87-4db4-ae52-3acb182bf84c",
+		"tenantId": "cc1d8caf-5ac9-4e3e-b133-e603ad85abc9"
+	}
+}
