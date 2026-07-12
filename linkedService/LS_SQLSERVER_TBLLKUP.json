@@ -1,0 +1,22 @@
+{
+	"name": "LS_SQLSERVER_TBLLKUP",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "This query extracts metadata, including schema, table name, watermark column, and last processed value, from the ADF watermark table.",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "Anuj\\SQLEXPRESS",
+			"database": "RetailDW_Dev",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "Anuj_kyndryl",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJiN2ZjOTJmNy1jZTI0LTRhMDAtYTViMS0zNDVlMjA4OTE5NzYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
