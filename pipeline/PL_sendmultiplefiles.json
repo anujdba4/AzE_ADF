@@ -60,12 +60,12 @@
 							"userProperties": [],
 							"typeProperties": {
 								"on": {
-									"value": "(@last(split(item().name, '.')))",
+									"value": "@last(split(item().name,'.'))",
 									"type": "Expression"
 								},
 								"cases": [
 									{
-										"value": "CSV",
+										"value": "csv",
 										"activities": [
 											{
 												"name": "CopyCSV",
@@ -101,7 +101,13 @@
 												"inputs": [
 													{
 														"referenceName": "DS_Switch_multiplefiles_seperatefolder",
-														"type": "DatasetReference"
+														"type": "DatasetReference",
+														"parameters": {
+															"sourcefile": {
+																"value": "@item().name",
+																"type": "Expression"
+															}
+														}
 													}
 												],
 												"outputs": [
@@ -114,7 +120,7 @@
 										]
 									},
 									{
-										"value": "TXT",
+										"value": "txt",
 										"activities": [
 											{
 												"name": "Copy data1",
