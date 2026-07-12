@@ -1,0 +1,22 @@
+{
+	"name": "LS_onprem_SQLserver_DW",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Executes a stored procedure to update the watermark value in the control table using the provided table schema, table name, and watermark column",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "Anuj\\SQLEXPRESS",
+			"database": "RetailDW_Dev",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "Anuj_kyndryl",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0NDJlZjljYy0zNjVjLTQ3OGMtYjY2NC01MjljMjc2ZDUyNDciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
