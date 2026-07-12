@@ -1,0 +1,21 @@
+{
+	"name": "ADLS_SQLTABLE_PARQUET_DW",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_SQLTABLE_PARQUET_DW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "@concat(dataset().Table_Name,'_',formatDateTime(utcNow(),'yyyyMMddHHmmss'),'.parquet')",
+				"folderPath": "@concat(dataset().Table_Name,'/',formatDateTime(utcNow(),'yyyy/MM/dd’))",
+				"fileSystem": "retaildw"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

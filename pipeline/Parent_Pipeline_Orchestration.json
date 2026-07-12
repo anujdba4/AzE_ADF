@@ -23,7 +23,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "DS_SQLSERVER_TBLLookup",
+						"referenceName": "DS_SQLSERVER_TBLLKUP",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -84,6 +84,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Child Pipeline incremental",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}
