@@ -49,6 +49,7 @@
 						"value": "@activity('LKUP_SQLTABLE_WATERMARK_DW').output.value",
 						"type": "Expression"
 					},
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Execute Child Pipeline incremental Load",
@@ -85,22 +86,6 @@
 							}
 						}
 					]
-				}
-			},
-			{
-				"name": "Execute Pipeline1",
-				"type": "ExecutePipeline",
-				"dependsOn": [],
-				"policy": {
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "Child Pipeline incremental",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
 				}
 			}
 		],
