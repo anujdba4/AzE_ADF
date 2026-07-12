@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'DS_CSV_PARQUET_OUTPUT'"
 		},
+		"DS_SqlTable_Parquet_DW_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_SqlTable_Parquet_DW'"
+		},
 		"DS_Switch_multiplefiles_seperatefolder_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'DS_Switch_multiplefiles_seperatefolder'"
@@ -26,6 +30,10 @@
 		"LSDelimitedText_filter_ADLS_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LSDelimitedText_filter_ADLS'"
+		},
+		"LS_ADLS_SQLTABLE_PARQUET_DW_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_SQLTABLE_PARQUET_DW'"
 		},
 		"LS_BinaryTXT_connectionString": {
 			"type": "secureString",
@@ -51,6 +59,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_Input_CSV_Parquet'"
 		},
+		"LS_LKUP_MAX_VALUE_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_LKUP_MAX_VALUE'"
+		},
 		"LS_Paqbinary_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_Paqbinary'"
@@ -67,6 +79,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_SQLMigration_Parquet'"
 		},
+		"LS_SQLSERVER_TBLLKUP_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLSERVER_TBLLKUP'"
+		},
+		"LS_SQLSERVER_TBLLookup_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLSERVER_TBLLookup'"
+		},
 		"LS_getmetadata_filter_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_getmetadata_filter'"
@@ -82,6 +102,10 @@
 		"LS_multiplefiles_seperatefolder_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_multiplefiles_seperatefolder'"
+		},
+		"LS_onprem_SQLserver_DW_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_onprem_SQLserver_DW'"
 		},
 		"LS_onpremtbs_adls_csv_accountKey": {
 			"type": "secureString",
@@ -131,7 +155,15 @@
 			"type": "string",
 			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
 		},
+		"DS_SqlTable_Parquet_DW_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
+		},
 		"LSDelimitedText_filter_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
+		},
+		"LS_ADLS_SQLTABLE_PARQUET_DW_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
 		},
@@ -146,6 +178,18 @@
 		"LS_Getmetadata_foreachcsvfile_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
+		},
+		"LS_LKUP_MAX_VALUE_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "Anuj\\SQLEXPRESS"
+		},
+		"LS_LKUP_MAX_VALUE_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailDW_Dev"
+		},
+		"LS_LKUP_MAX_VALUE_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Anuj_kyndryl"
 		},
 		"LS_Paqbinary_properties_typeProperties_url": {
 			"type": "string",
@@ -179,9 +223,45 @@
 			"type": "string",
 			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
 		},
+		"LS_SQLSERVER_TBLLKUP_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "Anuj\\SQLEXPRESS"
+		},
+		"LS_SQLSERVER_TBLLKUP_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailDW_Dev"
+		},
+		"LS_SQLSERVER_TBLLKUP_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Anuj_kyndryl"
+		},
+		"LS_SQLSERVER_TBLLookup_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "Anuj\\SQLEXPRESS"
+		},
+		"LS_SQLSERVER_TBLLookup_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailDW_Dev"
+		},
+		"LS_SQLSERVER_TBLLookup_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Anuj_kyndryl"
+		},
 		"LS_lookup_filter_outdata_ADLS_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
+		},
+		"LS_onprem_SQLserver_DW_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "Anuj\\SQLEXPRESS"
+		},
+		"LS_onprem_SQLserver_DW_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailDW_Dev"
+		},
+		"LS_onprem_SQLserver_DW_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Anuj_kyndryl"
 		},
 		"LS_onpremtbs_adls_csv_properties_typeProperties_url": {
 			"type": "string",
@@ -277,6 +357,9 @@
 					"LSDelimitedText_filter_ADLS_accountKey": {
 						"value": "[parameters('LSDelimitedText_filter_ADLS_accountKey')]"
 					},
+					"LS_ADLS_SQLTABLE_PARQUET_DW_accountKey": {
+						"value": "[parameters('LS_ADLS_SQLTABLE_PARQUET_DW_accountKey')]"
+					},
 					"LS_BinaryTXT_connectionString": {
 						"value": "[parameters('LS_BinaryTXT_connectionString')]"
 					},
@@ -328,6 +411,9 @@
 					"LSDelimitedText_filter_ADLS_properties_typeProperties_url": {
 						"value": "[parameters('LSDelimitedText_filter_ADLS_properties_typeProperties_url')]"
 					},
+					"LS_ADLS_SQLTABLE_PARQUET_DW_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_SQLTABLE_PARQUET_DW_properties_typeProperties_url')]"
+					},
 					"LS_BinaryTXT_sink_properties_typeProperties_url": {
 						"value": "[parameters('LS_BinaryTXT_sink_properties_typeProperties_url')]"
 					},
@@ -348,9 +434,6 @@
 					},
 					"LS_output_multiplefile_seperatefolder_TXT_ADLS_properties_typeProperties_url": {
 						"value": "[parameters('LS_output_multiplefile_seperatefolder_TXT_ADLS_properties_typeProperties_url')]"
-					},
-					"LS_restapi_properties_typeProperties_url": {
-						"value": "[parameters('LS_restapi_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -384,6 +467,9 @@
 					},
 					"lstxtadls_accountKey": {
 						"value": "[parameters('lstxtadls_accountKey')]"
+					},
+					"LS_restapi_properties_typeProperties_url": {
+						"value": "[parameters('LS_restapi_properties_typeProperties_url')]"
 					},
 					"LS_restapi_parquet_properties_typeProperties_url": {
 						"value": "[parameters('LS_restapi_parquet_properties_typeProperties_url')]"
@@ -420,6 +506,12 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"DS_SqlTable_Parquet_DW_accountKey": {
+						"value": "[parameters('DS_SqlTable_Parquet_DW_accountKey')]"
+					},
+					"LS_LKUP_MAX_VALUE_password": {
+						"value": "[parameters('LS_LKUP_MAX_VALUE_password')]"
+					},
 					"LS_SP_insertcustomer_onprem_password": {
 						"value": "[parameters('LS_SP_insertcustomer_onprem_password')]"
 					},
@@ -429,11 +521,32 @@
 					"LS_SQLMigration_Parquet_accountKey": {
 						"value": "[parameters('LS_SQLMigration_Parquet_accountKey')]"
 					},
+					"LS_SQLSERVER_TBLLKUP_password": {
+						"value": "[parameters('LS_SQLSERVER_TBLLKUP_password')]"
+					},
+					"LS_SQLSERVER_TBLLookup_password": {
+						"value": "[parameters('LS_SQLSERVER_TBLLookup_password')]"
+					},
+					"LS_onprem_SQLserver_DW_password": {
+						"value": "[parameters('LS_onprem_SQLserver_DW_password')]"
+					},
 					"LS_onpremtbs_adls_csv_accountKey": {
 						"value": "[parameters('LS_onpremtbs_adls_csv_accountKey')]"
 					},
 					"LS_onpremtbs_aze_password": {
 						"value": "[parameters('LS_onpremtbs_aze_password')]"
+					},
+					"DS_SqlTable_Parquet_DW_properties_typeProperties_url": {
+						"value": "[parameters('DS_SqlTable_Parquet_DW_properties_typeProperties_url')]"
+					},
+					"LS_LKUP_MAX_VALUE_properties_typeProperties_server": {
+						"value": "[parameters('LS_LKUP_MAX_VALUE_properties_typeProperties_server')]"
+					},
+					"LS_LKUP_MAX_VALUE_properties_typeProperties_database": {
+						"value": "[parameters('LS_LKUP_MAX_VALUE_properties_typeProperties_database')]"
+					},
+					"LS_LKUP_MAX_VALUE_properties_typeProperties_userName": {
+						"value": "[parameters('LS_LKUP_MAX_VALUE_properties_typeProperties_userName')]"
 					},
 					"LS_SP_insertcustomer_onprem_properties_typeProperties_server": {
 						"value": "[parameters('LS_SP_insertcustomer_onprem_properties_typeProperties_server')]"
@@ -455,6 +568,33 @@
 					},
 					"LS_SQLMigration_Parquet_properties_typeProperties_url": {
 						"value": "[parameters('LS_SQLMigration_Parquet_properties_typeProperties_url')]"
+					},
+					"LS_SQLSERVER_TBLLKUP_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLSERVER_TBLLKUP_properties_typeProperties_server')]"
+					},
+					"LS_SQLSERVER_TBLLKUP_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLSERVER_TBLLKUP_properties_typeProperties_database')]"
+					},
+					"LS_SQLSERVER_TBLLKUP_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLSERVER_TBLLKUP_properties_typeProperties_userName')]"
+					},
+					"LS_SQLSERVER_TBLLookup_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLSERVER_TBLLookup_properties_typeProperties_server')]"
+					},
+					"LS_SQLSERVER_TBLLookup_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLSERVER_TBLLookup_properties_typeProperties_database')]"
+					},
+					"LS_SQLSERVER_TBLLookup_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLSERVER_TBLLookup_properties_typeProperties_userName')]"
+					},
+					"LS_onprem_SQLserver_DW_properties_typeProperties_server": {
+						"value": "[parameters('LS_onprem_SQLserver_DW_properties_typeProperties_server')]"
+					},
+					"LS_onprem_SQLserver_DW_properties_typeProperties_database": {
+						"value": "[parameters('LS_onprem_SQLserver_DW_properties_typeProperties_database')]"
+					},
+					"LS_onprem_SQLserver_DW_properties_typeProperties_userName": {
+						"value": "[parameters('LS_onprem_SQLserver_DW_properties_typeProperties_userName')]"
 					},
 					"LS_onpremtbs_adls_csv_properties_typeProperties_url": {
 						"value": "[parameters('LS_onpremtbs_adls_csv_properties_typeProperties_url')]"

@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LSDelimitedText_filter_ADLS'"
 		},
+		"LS_ADLS_SQLTABLE_PARQUET_DW_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_SQLTABLE_PARQUET_DW'"
+		},
 		"LS_BinaryTXT_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_BinaryTXT'"
@@ -95,6 +99,10 @@
 			"type": "string",
 			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
 		},
+		"LS_ADLS_SQLTABLE_PARQUET_DW_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
+		},
 		"LS_BinaryTXT_sink_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
@@ -122,10 +130,6 @@
 		"LS_output_multiplefile_seperatefolder_TXT_ADLS_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevvisionboard.dfs.core.windows.net/"
-		},
-		"LS_restapi_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://retoolapi.dev/5yDVOt/data"
 		}
 	},
 	"variables": {
@@ -217,6 +221,24 @@
 					"accountKey": {
 						"type": "SecureString",
 						"value": "[parameters('LSDelimitedText_filter_ADLS_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/LS_ADLS_SQLTABLE_PARQUET_DW')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "SQL Server DS_LKUP_MAX_VALUE.",
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('LS_ADLS_SQLTABLE_PARQUET_DW_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('LS_ADLS_SQLTABLE_PARQUET_DW_accountKey')]"
 					}
 				}
 			},
@@ -416,21 +438,6 @@
 						"type": "SecureString",
 						"value": "[parameters('LS_output_multiplefile_seperatefolder_TXT_ADLS_accountKey')]"
 					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_restapi')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "RestService",
-				"typeProperties": {
-					"url": "[parameters('LS_restapi_properties_typeProperties_url')]",
-					"enableServerCertificateValidation": true,
-					"authenticationType": "Anonymous"
 				}
 			},
 			"dependsOn": []
