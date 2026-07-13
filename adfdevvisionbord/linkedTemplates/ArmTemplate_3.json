@@ -592,7 +592,7 @@
 									}
 								}
 							},
-							"firstRowOnly": false
+							"firstRowOnly": true
 						}
 					},
 					{
